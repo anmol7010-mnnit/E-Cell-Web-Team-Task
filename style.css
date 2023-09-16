@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 2px;
+}
+
+nav {
+    width: 100%;
+    height: 60px;
+    background-color: rgb(56, 56, 56);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-shadow: 0 7px 10px rgb(143, 143, 143);
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 30px;
+}
+
+a {
+    color: white;
+    font-size: 20px;
+    padding: 4px 9px;
+}
+
+a:hover {
+    transition: 0.6s;
+    background: rgb(96, 96, 96);
+    border-radius: 5px;
+}
+
+.checkbtn {
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+.outer-box {
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.gradient {
+    width: 385px;
+    height: 385px;
+    background: rgb(250,0,255);
+    background: linear-gradient(325deg, rgba(250,0,255,1) 4%, rgba(51,0,255,1) 94%);
+    border: 5px solid rgb(212, 211, 211);
+    border-radius: 15px;
+}
+
+.logo {
+    width: 385px;
+    height: 385px;
+    border: 1px solid black;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: white;
+    padding: 10px;
+}
+
+.outer-grid {
+    width: 385px;
+    height: 385px;
+    border: 5px solid rgb(189, 189, 189);
+    background-color: rgb(212, 211, 211);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.grid-item {
+    height: 100px;
+    width: 100px;
+    background-color: #00407A;
+    border-radius: 15px;
+}
+
+@media (max-width: 800px) {
+    nav {
+        width: 100%;
+    }
+    nav ul li a {
+        font-size: 18px;
+    }
+    .gradient {
+        display: flex;
+        flex-basis: 1;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .outer-box {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap-reverse;
+    }
+
+    .logo {
+        text-align: center;
+    }
+
+    .checkbtn {
+        display: block;
+        position: absolute;
+        right: 20px;
+    }
+
+    ul {
+        position: relative;
+        width: 100%;
+        height: 80px;
+        background: rgb(123, 123, 123);
+        text-align: center;
+        top: 70px;
+        left: -100%;
+        transition: all 0.5s;
+        box-shadow: 0 7px 10px rgb(143, 143, 143);
+    }
+
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    nav ul li a {
+        font-size: 15px;
+        color: white;
+    }
+
+    a:hover {
+        transition: 0.6s;
+        background: rgb(96, 96, 96);
+        border-radius: 5px; 
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+    }
+}
+
+.grid-item:hover {
+    box-shadow: 0 0 10px black; 
+    transition: 0.5s;
+}
